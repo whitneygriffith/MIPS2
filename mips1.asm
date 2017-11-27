@@ -1,4 +1,5 @@
 .data
 
+#variables
 .text
 
