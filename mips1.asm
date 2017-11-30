@@ -17,8 +17,8 @@ main:
 	
 	la $s0, string	#created unchanging reference to string address
 	
-	addi $a2, $a2, 0	#initiatizing start argument to be passed to subprogram_2
-	addi $a3, $a3, 0	#initiatizing end argument to be passed to subprogram_2	
+	addi $a2, $zero, 0	#initiatizing start argument to be passed to subprogram_2
+	addi $a3, $zero, 0	#initiatizing end argument to be passed to subprogram_2	
 	
 	
 
@@ -106,6 +106,7 @@ subprogram_2:
 	
 	loop5:
 		#Checks for leading space or tab
+		
 		add $t6, $s0, $t2	#offset the start of the string
 		lb $t7, 0($t6)		#gets char from string
 		beq $t7, 32, continue1	#check for space
